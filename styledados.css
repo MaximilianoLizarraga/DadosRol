@@ -1,0 +1,47 @@
+.imgdados {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 160px;
+    border-style: dashed;
+    transition: 900ms;
+    
+}
+.imgdados:hover {
+    transform:rotate(-30deg)
+
+}
+
+.rollit {
+    width: 84px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 32px;
+    transition: 500ms; 
+    border-color:aqua;
+    
+       
+}
+.rollit:hover {
+    background-color:turquoise;
+    height: 20px;
+    width: 140px;  
+    box-shadow: 0px 0px 10px rgb(0,0,255);  
+}
+.dadodef {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 8px;
+    align-items: center;
+}
+
+.dados {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    margin-top: 4px;
+    border-style: dotted;
+    justify-content: space-between;
+}
