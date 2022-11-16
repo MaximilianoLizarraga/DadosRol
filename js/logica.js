@@ -1,11 +1,13 @@
 
 
 window.addEventListener("load", function(){
+    
 
 let botonDado6 = document.getElementById("boton-dado6")
 
 function funciono(){
     let tope = document.getElementById("cantDado6").value;
+
     
     return cantidad(tope)
 }
