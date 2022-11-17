@@ -47,6 +47,6 @@ input10.addEventListener('blur', prueba );
 input20.addEventListener('blur', prueba );
 input100.addEventListener('blur', prueba );
 
-
+ /* probandogitencasa */
 
 })
