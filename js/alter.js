@@ -1,5 +1,6 @@
 window.addEventListener('load', function(){
     //capturo todos los input 
+    let nameEvent;
     let input6 = document.querySelector('#cantDado6');
     let input10 = document.querySelector('#cantDado10');
     let input20 = document.querySelector('#cantDado20');
@@ -8,9 +9,20 @@ window.addEventListener('load', function(){
     let botonDado10 = document.getElementById("boton-dado10");
     let botonDado20 = document.getElementById("boton-dado20");
     let botonDado100 = document.getElementById("boton-dado100");
+    let clearButtons = document.querySelectorAll('.clear')
+    
+    clearButtons.forEach(clearButton =>{
+        clearButton.addEventListener('click', clear)
+    })
 
-    let nameEvent;
-  function prueba(event){
+    function clear(){
+        let iteraciones = document.getElementById("resultado-dado-6");
+        iteraciones.innerHTML = ''
+
+    }
+
+   
+  function eventoCap(event){
    nameEvent = event.target.value;
    return nameEvent;
 
@@ -18,7 +30,7 @@ window.addEventListener('load', function(){
    }  
     
 
-function funciono(){
+function pasaValor(){
     nameEvent;
     return cantidad(nameEvent)
 }
@@ -26,6 +38,8 @@ function funciono(){
 function dado (min,max){
     return Math.floor(Math.random()*(max-min+1)+min)
 }
+
+
 
 function cantidad(nameEvent){
     let iteraciones = document.getElementById("resultado-dado-6");
@@ -38,14 +52,14 @@ function cantidad(nameEvent){
 
 }
 
-botonDado6.addEventListener("click", funciono);
-botonDado10.addEventListener("click", funciono);
-botonDado20.addEventListener("click", funciono);
-botonDado100.addEventListener("click", funciono);
-input6.addEventListener('blur', prueba );
-input10.addEventListener('blur', prueba );
-input20.addEventListener('blur', prueba );
-input100.addEventListener('blur', prueba );
+botonDado6.addEventListener("click", pasaValor);
+botonDado10.addEventListener("click", pasaValor);
+botonDado20.addEventListener("click", pasaValor);
+botonDado100.addEventListener("click", pasaValor);
+input6.addEventListener('blur', eventoCap );
+input10.addEventListener('blur', eventoCap);
+input20.addEventListener('blur', eventoCap );
+input100.addEventListener('blur', eventoCap );
 
 
 
