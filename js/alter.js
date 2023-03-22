@@ -26,22 +26,22 @@ window.addEventListener("load", function () {
     return nameEvent;
   }
 
-  function pasaValor(max) {
-   
-    return function cantidad(nameEvent) {
+  function pasaValor(max) { 
+    return function cantidad() {
       let iteraciones = document.getElementById("resultado-dado-6");
-
       for (i = 1; i <= nameEvent; i++) {
-        iteraciones.innerHTML +=
-          `<li>El resultado del dado numero ${i} es:</li>` + dado(max);
-      }
+        iteraciones.innerHTML += `<li>El resultado del dado numero ${i} es: ${dado(max)} </li>`
+      }      
       return "Se tiraron " + nameEvent + " dados";
-    };
+    }    
   }
+  
+ 
 
   function dado(max) {
     return Math.floor(Math.random() * (max - 1 + 1) + 1);
   }
+  
 
   botonDado6.addEventListener("click", pasaValor(6));
   botonDado10.addEventListener("click", pasaValor(10));

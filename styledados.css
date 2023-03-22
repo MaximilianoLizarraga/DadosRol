@@ -18,9 +18,8 @@
     border-radius: 32px;
     transition: 500ms; 
     border-color:aqua;
-    
-       
 }
+
 .rollit:hover {
     background-color:turquoise;
     height: 20px;
@@ -44,4 +43,8 @@ input {
     margin-top: 4px;
     border-style: dotted;
     justify-content: space-between;
+}
+
+@media (max-width: 300px) {
+    html{background-color: aqua;}
 }
